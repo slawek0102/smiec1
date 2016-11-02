@@ -1,8 +1,10 @@
-/**
- * Created by lkmk on 2016-11-02.
- */
-document.querySelector('button').addEventListener('click', function () {
-    var wartosc = document.querySelector('input').value;
-    alert(wartosc);
-});
-//# sourceMappingURL=js03.js.map
+document.addEventListener('DOMContentLoaded', function () {
+
+
+
+    for (let i = 0; i<100; i++){
+        document.body.innerHTML +=`<p> Akapit + ${i}</p>`;
+    }
+
+
+})
