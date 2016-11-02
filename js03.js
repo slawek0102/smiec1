@@ -2,9 +2,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-    for (let i = 0; i<100; i++){
-        document.body.innerHTML +=`<p> Akapit + ${i}</p>`;
-    }
 
 
-})
+ var HTML = '<table>';
+
+    // for (var i = 1; i < 9; i++) {
+
+        HTML += '<tr>' ;
+
+            for (var w = 1; w < 9; w++){
+               HTML += '<td>' ;
+               HTML += '</td>' + 'koniec wiersza';
+            }
+
+        HTML += '</tr>' ;
+    // }
+
+    HTML += '</table>';
+
+    document.body.innerHTML += HTML;
+
+});
