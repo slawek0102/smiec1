@@ -1,25 +1,25 @@
-document.addEventListener('DOMContentLoaded', function () {
+var tab = [];
+var html = '';
+
+// document.addEventListener('DOMContentLoaded', function () {
+
+    document.querySelector('button').addEventListener('click', function () {
+        var value = document.querySelector('input').value;
+        document.querySelector('input').value = '';
+        tab.push(value);
+        console.log(tab);
+
+        var html = '';
+
+        for (let index in tab){
+
+            html+= '<li>' + tab[index] + '</li>'
+        }
+
+        document.querySelector('ul').innerHTML = html;
+    });
 
 
 
 
-
- var HTML = '<table>';
-
-    // for (var i = 1; i < 9; i++) {
-
-        HTML += '<tr>' ;
-
-            for (var w = 1; w < 9; w++){
-               HTML += '<td>' ;
-               HTML += '</td>' + 'koniec wiersza';
-            }
-
-        HTML += '</tr>' ;
-    // }
-
-    HTML += '</table>';
-
-    document.body.innerHTML += HTML;
-
-});
+// });
