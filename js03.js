@@ -1,25 +1,14 @@
-var tab = [];
-var html = '';
 
-// document.addEventListener('DOMContentLoaded', function () {
+    // var element = document.querySelector('h1');
+    // element.style.backgroundColor = 'red';
 
-    document.querySelector('button').addEventListener('click', function () {
-        var value = document.querySelector('input').value;
-        document.querySelector('input').value = '';
-        tab.push(value);
-        console.log(tab);
+    // var elements = document.querySelectorAll('li');
 
-        var html = '';
+    // console.log(elements[0].innerHTML);
 
-        for (let index in tab){
+    var element = document.createElement('li');
+    element.innerHTML = 'Kolejny element';
 
-            html+= '<li>' + tab[index] + '</li>'
-        }
+    var lista = document.querySelector('ul');
 
-        document.querySelector('ul').innerHTML = html;
-    });
-
-
-
-
-// });
+    lista.appendChild(element);
