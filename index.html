@@ -4,27 +4,77 @@
     <meta charset="UTF-8">
     <title>Petle</title>
 
-    <!--<script src="./js03.js"></script>-->
+
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+
     <link rel="stylesheet" href="./styles.css">
+    <script src="article.js"></script>
+    <script src="app.js"></script>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            app.init();
+        })
+    </script>
 </head>
 <body>
 
-<h1>Ala ma kota</h1>
+<div class="container">
 
-<ul>
-    <li>a</li>
-    <li>b</li>
-    <li>d</li>
-    <li>e</li>
-    <li>f</li>
-    <li>g</li>
-</ul>
+    <div class="row">
+        <div class="col">
 
+            <div class="panel panel-primary" id="add-article-panel">
+                <div class="panel-heading">
+                    Heading
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label for="article-title">Labelka</label>
+                        <input type="text"
+                               id="article-title"
+                               class="form-control"
+                               placeholder="wprowadz tytul">
 
+                    </div>
+                    <div class="form-group">
+                        <label for="article-description">opis</label>
+                        <input type="text"
+                               id="article-description"
+                               class="form-control"
+                               placeholder="wprowadz opis">
 
+                    </div>
+                </div>
+
+                <div class="panel-footer">
+                    <button class="btn btn-primary"
+                            onclick="app.addArticle()"
+                    >Dodaj
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="article-list">
+
+        <div class="panel panel-info">
+            <div class="panel-heading">Tytul pierwszego artykulu</div>
+            <div class="panel-body">Opis artykulu</div>
+            <div class="panel-footer">
+                <label>
+                    <input type="checkbox"
+                           onclick="app.changeStatus(this, 1)"> Aktywny
+                </label>
+                <button class="btn btn-danger pull-right"
+                        onclick="app.deleteArticle(1)">Usun
+                </button>
+            </div>
+        </div>
+        artikle list
+    </div>
+</div>
 
 </body>
-<script src="js03.js"></script>
 </html>
